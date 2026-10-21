@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+coverage/
+
+# Internal working briefs never belong in this repository.
+project-context/
+PROJECT_SUMMARIES.md

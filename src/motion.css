@@ -1,0 +1,21 @@
+/* Motion is progressive enhancement; content stays visible without JavaScript. */
+@media(prefers-reduced-motion:no-preference){
+  .hero .eyebrow{animation:arrive .6s ease-out both}
+  .hero h1{animation:arrive .8s .08s cubic-bezier(.2,.7,.2,1) both}
+  .hero-bottom{animation:arrive .8s .18s cubic-bezier(.2,.7,.2,1) both}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+  .primary-link,.more-button,.tags li,.architecture{transition:transform .25s ease,background-color .25s ease,box-shadow .25s ease}
+  .primary-link:hover,.more-button:hover{transform:translateY(-2px);box-shadow:0 6px 18px #91460d16}
+  .primary-link span,.back-top span{display:inline-block;transition:transform .25s ease}
+  .primary-link:hover span{transform:translateY(3px)}
+  .back-top:hover span{transform:translateY(-4px)}
+  .project.featured:hover .architecture{transform:translateY(-3px)}
+  .details-collapse{transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1),opacity .3s ease,visibility 0s .4s}
+  .details-collapse.is-open{transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1),opacity .3s ease,visibility 0s}
+  @keyframes arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+}
+.details-collapse{display:grid;grid-template-rows:0fr;opacity:0;visibility:hidden}
+.details-collapse.is-open{grid-template-rows:1fr;opacity:1;visibility:visible}
+.details-clip{min-height:0;overflow:hidden}
+.hero h1:focus{outline:none}
